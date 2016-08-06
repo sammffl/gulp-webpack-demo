@@ -1,0 +1,23 @@
+{
+  "name": "gulp-webpack-demo",
+  "version": "1.0.0",
+  "description": "练习gulp和webpack打包管理工具",
+  "main": "gulpfile.js",
+  "scripts": {
+    "build": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sammffl/gulp-webpack-demo.git"
+  },
+  "author": "Sam.Shen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sammffl/gulp-webpack-demo/issues"
+  },
+  "homepage": "https://github.com/sammffl/gulp-webpack-demo#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.1.0"
+  }
+}
