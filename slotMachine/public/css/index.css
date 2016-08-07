@@ -11,6 +11,7 @@ h2 {
   border-radius: 5px;
 }
 .f {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   border-radius: 33px;
@@ -23,13 +24,16 @@ h2 {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 .example {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transition: all .5s;
   transition: all .5s;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  background: -webkit-linear-gradient(top, white, black);
   background: linear-gradient(to bottom, white, black);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
