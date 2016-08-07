@@ -32,6 +32,7 @@ gulp.task('compileLess', () => {
         .pipe(gulp.dest(`${PATH.projectPath}/public/css`))
 });
 
+
 gulp.task('babelJs', () => {
     gulp.src(`${PATH.originalPath}/js/**/*.js`)
         .pipe(babel({
@@ -42,9 +43,7 @@ gulp.task('babelJs', () => {
 
 gulp.task('moveHtml', () => {
     gulp.src(`${__dirname}/index.pug`)
-        .pipe(pug({
-
-        }))
+        .pipe(pug({}))
         .pipe(gulp.dest(PATH.projectPath));
 });
 
