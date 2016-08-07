@@ -5,6 +5,7 @@ import less from 'gulp-less';
 import htmlmin from 'gulp-htmlmin';
 import pug from 'gulp-pug';
 import cssBase64 from 'gulp-css-base64';
+import base64 from 'gulp-base64';
 import imagemin from 'gulp-imagemin';
 import babel from 'gulp-babel';
 
@@ -28,6 +29,13 @@ gulp.task('compileLess', () => {
     gulp.src(`${PATH.originalPath}/less/**/*.less`)
         .pipe(less())
         .pipe(cssBase64())
+        // .pipe(base64({
+        //     baseDir: `${PATH.originalPath}/images/icons`,
+        //     extensions: ['png', 'jpg'],
+        //     maxImageSize: 20 * 1024, // bytes
+        //     deleteAfterEncoding: false,
+        //     debug: false
+        // }))
         .pipe(postcss(processors))
         .pipe(gulp.dest(`${PATH.projectPath}/public/css`))
 });
@@ -43,7 +51,9 @@ gulp.task('babelJs', () => {
 
 gulp.task('moveHtml', () => {
     gulp.src(`${__dirname}/index.pug`)
-        .pipe(pug({}))
+        .pipe(pug({
+            pretty: true
+        }))
         .pipe(gulp.dest(PATH.projectPath));
 });
 

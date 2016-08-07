@@ -1,40 +1,20 @@
-@color: #4D926F;
-#header {
-    color: @color;
+@white: #ffffff;
+@black: black;
+body {
+    padding: 0;
+    margin: 0;
+    border: 1px solid @white;
+    background-color: @black;
 }
-h2 {
-    color: @color;
+.img {
+    width: 200px;
+    height: 900px;
+    border: 1px solid @white;
+    background: url("../images/test.jpg") no-repeat center center / cover;
+    margin: 10px;
 }
 .content {
     width: 100px;
     height: 100px;
-    background: url("../images/apple.jpg?base64") no-repeat center center / cover;
-    border-radius: 5px;
-}
-.f {
-    display: flex;
-    border-radius: 33px;
-}
-@base: #f938ab;
-.box-shadow(@style, @c) when (iscolor(@c)) {
-    -webkit-box-shadow: @style @c;
-    box-shadow: @style @c;
-}
-.box-shadow(@style, @alpha:50%) when (isnumber(@alpha)) {
-    .box-shadow(@style, rgba(0, 0, 0, @alpha));
-}
-.box {
-    color: saturate(@base, 5%);
-    border-color: lighten(@base, 30%);
-    div {
-        .box-shadow(0 0 5px, 30%)
-    }
-}
-.example {
-    display: flex;
-    transition: all 0.5s;
-    user-select: none;
-    background: linear-gradient(to bottom, white, black);
-    border-radius: 2px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    background: url('../images/icons/apple.jpg?base64') no-repeat center center / cover;
 }
